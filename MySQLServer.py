@@ -3,8 +3,6 @@ from mysql.connector import Error
 
 def create_database():
     try:
-        if 
-
 
         my_db = mysql.connector.connect(
             host='localhost',
@@ -21,7 +19,7 @@ def create_database():
             print("Database 'alx_book_store' created successfully!")
     
     except Error as e:
-        print(f"Error connecting to MySQL: {e}")
+        print("except mysql.connector.Error")
     
     finally:
         # Close cursor and connection
