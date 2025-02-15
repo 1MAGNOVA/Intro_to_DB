@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS Customers (
 CREATE TABLE IF NOT EXISTS Orders (
     order_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT,
-    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    order_date DATE NOT NULL,
     total_amount DECIMAL(10, 2) NOT NULL,
     status ENUM('Pending', 'Shipped', 'Delivered', 'Cancelled') NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
